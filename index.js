@@ -17,3 +17,10 @@ function handleSubmitTwo(ev){
 
 personForm.addEventListener('submit', handleSubmit)
 personForm.addEventListener('submit', handleSubmitTwo)
+
+function lengthReturn(ev){
+    ev.preventDefault()
+    const f = ev.target
+    const printit=document.querySelector('h3')
+    printit.textContent=f.paragraph.value
+}
