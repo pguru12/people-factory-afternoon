@@ -11,7 +11,7 @@ function handleSubmit(ev){
 function handleSubmitTwo(ev){
     ev.preventDefault()
     const f = ev.target
-    const heading=document.querySelector('h1')
+    const heading=document.querySelector('h2')
     heading.textContent=f.personAge.value
 }
 
