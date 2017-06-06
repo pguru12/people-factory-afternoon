@@ -23,7 +23,12 @@ function lengthReturn(ev){
     while (i<f.paragraph.value.length){
         i++
     }
-    printit.textContent=f.paragraph.value+'. You input is '+i+' characters long'
+    if (f.paragraph.value[f.paragraph.value.length-1]==='.'||f.paragraph.value[f.paragraph.value.length-1]==='!'){
+        printit.textContent=f.paragraph.value+' You input is '+i+' characters long'
+    }
+    else {
+        printit.textContent=f.paragraph.value+'. You input is '+i+' characters long'
+    }
 }
 
 personForm.addEventListener('submit', handleSubmit)
