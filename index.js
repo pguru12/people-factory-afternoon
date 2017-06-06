@@ -7,7 +7,23 @@ function renderColor(color){
     div.style.height = '50px'
 
     return div 
+}
 
+function renderList(){
+    const list = document.createElement('ul')
+    // call renderListItem several times?
+    Object.keys(personData).map(function(label){
+        const item = renderListItem(label, personData)
+        list.appendChild()
+    })
+    return list
+}
+
+function renderListItem(){
+    const item = document.createElement('li')
+    item.textContent=`${label}: ${value}`
+
+    return item
 }
 
 function handleSubmit(ev){
@@ -51,6 +67,12 @@ function handleSubmit3(ev){
     const favoriteColor=f.favoriteColor.value
     const favoriteDino=f.favoriteDino.value
     const age = f.age.value
+
+    const person = {
+        name: f.personName.value,
+        favoriteColor: f.favoriteColor.value,
+        age: f.age.value,
+    }
 
     const colorDiv = `<div style="background-color: ${favoriteColor}; width: 100px; height: 50px;"></div>`
     const favoriteFood = f.favoriteFood.value
