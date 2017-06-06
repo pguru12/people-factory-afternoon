@@ -33,6 +33,14 @@ function lengthReturn(ev){
         printit.textContent=f.paragraph.value+'. Your input is '+i+' characters long.'
     }
 }
+function handleSubmit(ev){
+    ev.preventDefault()
+    const f = ev.target
+    const details = document.querySelector('#details')
+    const name = f.personName.value
+
+    details.innerHTML += name
+}
 
 personForm.addEventListener('submit', handleSubmit)
 personForm.addEventListener('submit', handleSubmitTwo)
