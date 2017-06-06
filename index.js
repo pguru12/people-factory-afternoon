@@ -39,19 +39,51 @@ function handleSubmit3(ev){
     const details = document.querySelector('#details')
     const name = f.personName.value
     const favoriteColor=f.favoriteColor.value
+    const favoriteDino=f.favoriteDino.value
     const age = f.age.value
 
     const colorDiv = `<div style="background-color: ${favoriteColor}; width: 100px; height: 50px;"></div>`
-
+    const favoriteFood = f.favoriteFood.value
    // const boldedName = document.createElement('strong')
+ //  <div id="details">
+ //  <strong>Pranav</strong>
+ //  </div>
    // boldedName.textContent=name
    // details.appendChild(boldedName)
+
+   const list = document.createElement('ul')
+   const nameItem = document.createElement('li')
+   nameItem.textContent = `Name: ${name}`
+
+   const colorItem = document.createElement('li')
+   colorItem.textContent = `Favorite Color: ${colorDiv}`
+
+   const ageItem = document.createElement('li')
+   ageItem.textContent=`Age: ${age}`
+
+   const list = document.createElement('ul')
+   list.appendChild(nameItem)
+   list.appendChild(colorItem)
+   list.appendChild(ageItem)
+
+   details.appendChild(list)
 
    details.innerHTML = `
    <ul>
     <li>Name: ${name}</li>
     <li>Favorite Color: ${colorDiv}</li>
     <li>Age: ${age}</li>
+   </ul>`
+   document.createElement = `
+   <ul>
+       <li>Favorite Food: ${favoriteFood}</li>
+       <li>Favorite Dinosaur: ${favoriteDino}</li>
+   </ul>`
+
+   details.appendChild = `
+   <ul>
+       <li>Favorite Food: ${favoriteFood}</li>
+       <li>Favorite Dinosaur: ${favoriteDino}</li>
    </ul>`
 }
 
