@@ -24,10 +24,10 @@ function lengthReturn(ev){
         i++
     }
     if (f.paragraph.value[f.paragraph.value.length-1]==='.'||f.paragraph.value[f.paragraph.value.length-1]==='!'){
-        printit.textContent=f.paragraph.value+' You input is '+i+' characters long'
+        printit.textContent=f.paragraph.value+' Your input is '+i+' characters long'+f.paragraph.value[f.paragraph.value.length-1]
     }
     else {
-        printit.textContent=f.paragraph.value+'. You input is '+i+' characters long'
+        printit.textContent=f.paragraph.value+'. Your input is '+i+' characters long.'
     }
 }
 
