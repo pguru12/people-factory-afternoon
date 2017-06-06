@@ -13,3 +13,8 @@
 ## SUPER MEGA BONUS HYPER
 
 * Cange appearance of paragraph (think CSS) based on value from form
+
+## Day 2 Lab
+
+*Add form values to .details using document.createElement and appendChild, instead of innerHTML.
+*Break out some functionality into a separate function
