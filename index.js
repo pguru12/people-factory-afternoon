@@ -1,5 +1,15 @@
 const personForm = document.querySelector('#personForm')
 
+function renderColor(color){
+    const div = document.createElement('div')
+    div.style.backgroundColor = color
+    div.style.width = '100px'
+    div.style.height = '50px'
+
+    return div 
+
+}
+
 function handleSubmit(ev){
     ev.preventDefault()
     const f = ev.target
@@ -56,12 +66,12 @@ function handleSubmit3(ev){
    nameItem.textContent = `Name: ${name}`
 
    const colorItem = document.createElement('li')
-   colorItem.textContent = `Favorite Color: ${colorDiv}`
+   colorItem.textContent = `Favorite Color: ${renderColor(favoriteColor).outerHTML}`
 
    const ageItem = document.createElement('li')
    ageItem.textContent=`Age: ${age}`
 
-   const list = document.createElement('ul')
+ //  const list = document.createElement('ul')
    list.appendChild(nameItem)
    list.appendChild(colorItem)
    list.appendChild(ageItem)
