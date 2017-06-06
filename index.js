@@ -24,3 +24,4 @@ function lengthReturn(ev){
     const printit=document.querySelector('h3')
     printit.textContent=f.paragraph.value
 }
+personForm.addEventListener('submit', lengthReturn)
