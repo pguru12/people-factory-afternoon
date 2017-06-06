@@ -18,7 +18,7 @@ function handleSubmitTwo(ev){
 function lengthReturn(ev){
     ev.preventDefault()
     const f = ev.target
-    const printit=document.querySelector('h3')
+    const printit=document.querySelector('p')
     var i=0
     while (i<f.paragraph.value.length){
         i++
