@@ -34,12 +34,12 @@ function handleSubmit(ev){
     
 }
 
-function handleSubmitTwo(ev){
-    ev.preventDefault()
-    const f = ev.target
-    const heading=document.querySelector('h2')
-    heading.textContent=f.personAge.value
-}
+// function handleSubmitTwo(ev){
+//     ev.preventDefault()
+//     const f = ev.target
+//     const heading=document.querySelector('h2')
+//     heading.textContent=f.personAge.value
+// }
 
 function lengthReturn(ev){
     ev.preventDefault()
@@ -50,13 +50,13 @@ function lengthReturn(ev){
         i++
     }
     if (f.paragraph.value[f.paragraph.value.length-1]==='.'||f.paragraph.value[f.paragraph.value.length-1]==='!'){
-        printit.textContent=f.paragraph.value+' Your input is '+i+' characters long'+f.paragraph.value[f.paragraph.value.length-1]
+        printit.textContent='Paragraph: '+f.paragraph.value+' Your input is '+i+' characters long'+f.paragraph.value[f.paragraph.value.length-1]
     }
     else if (f.paragraph.value[f.paragraph.value.length-1]==='?'){
-        printit.textContent=f.paragraph.value+' Your input is '+i+' characters long.'
+        printit.textContent='Paragraph: '+f.paragraph.value+' Your input is '+i+' characters long.'
     }
     else {
-        printit.textContent=f.paragraph.value+'. Your input is '+i+' characters long.'
+        printit.textContent='Paragraph: '+f.paragraph.value+'. Your input is '+i+' characters long.'
     }
 }
 function handleSubmit3(ev){
@@ -65,17 +65,22 @@ function handleSubmit3(ev){
     const details = document.querySelector('#details')
     const name = f.personName.value
     const favoriteColor=f.favoriteColor.value
+    const age=f.age.value
+    const favoriteFood=f.favoriteFood.value
     const favoriteDino=f.favoriteDino.value
-    const age = f.age.value
+    const paragraph=f.paragraph.value
 
-    const person = {
-        name: f.personName.value,
-        favoriteColor: f.favoriteColor.value,
-        age: f.age.value,
-    }
+    // const person = {
+    //     name: f.personName.value,
+    //     favoriteColor: f.favoriteColor.value,
+    //     age: f.age.value,
+    //     favoriteFood: f.favoriteFood.value
+    //     favoriteDino: f.favoriteDino.value
+    //     paragraph: f.paragraph.value
+    // }
 
     const colorDiv = `<div style="background-color: ${favoriteColor}; width: 100px; height: 50px;"></div>`
-    const favoriteFood = f.favoriteFood.value
+//    const favoriteFood = f.favoriteFood.value
    // const boldedName = document.createElement('strong')
  //  <div id="details">
  //  <strong>Pranav</strong>
@@ -93,10 +98,22 @@ function handleSubmit3(ev){
    const ageItem = document.createElement('li')
    ageItem.textContent=`Age: ${age}`
 
+   const foodItem = document.createElement('li')
+   foodItem.textContent=`Food: ${favoriteFood}`
+
+   const dinoItem = document.createElement('li')
+   dinoItem.textContent=`Dinosaur: ${favoriteDino}`
+
+   const paraItem = document.createElement('li')
+   paraItem.textContent=`Age: ${paragraph}`
+
  //  const list = document.createElement('ul')
    list.appendChild(nameItem)
    list.appendChild(colorItem)
    list.appendChild(ageItem)
+   list.appendChild(foodItem)
+   list.appendChild(dinoItem)
+   list.appendChild(paraItem)
 
    details.appendChild(list)
 
@@ -105,6 +122,9 @@ function handleSubmit3(ev){
     <li>Name: ${name}</li>
     <li>Favorite Color: ${colorDiv}</li>
     <li>Age: ${age}</li>
+    <li>Favorite Food: ${favoriteFood}</li>
+    <li>Favorite Dinosaur: ${favoriteDino}</li>
+    <li>Paragraph: ${paragraph}
    </ul>`
    document.createElement = `
    <ul>
@@ -120,6 +140,6 @@ function handleSubmit3(ev){
 }
 
 personForm.addEventListener('submit', handleSubmit)
-personForm.addEventListener('submit', handleSubmitTwo)
+//personForm.addEventListener('submit', handleSubmitTwo)
 personForm.addEventListener('submit', lengthReturn)
 personForm.addEventListener('submit', handleSubmit3)
