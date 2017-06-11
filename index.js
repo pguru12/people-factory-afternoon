@@ -30,14 +30,15 @@ function handleSubmit(ev){
     ev.preventDefault()
     const f = ev.target
     const heading=document.querySelector('h1')
+    const heading2=document.querySelector('h2')
     heading.textContent=f.personName.value
-    
+    heading2.textContent=f.age.value
 }
 
 // function handleSubmitTwo(ev){
 //     ev.preventDefault()
 //     const f = ev.target
-//     const heading=document.querySelector('h2')
+//     
 //     heading.textContent=f.personAge.value
 // }
 
